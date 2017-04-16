@@ -3,8 +3,8 @@ package tests.velka.loginform.View;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
 
+import tests.velka.loginform.Presenter.LoginMainPresenter;
 import tests.velka.loginform.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +16,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        enterButton = (Button) findViewById(R.id.login_btn);
+        enterButton.setEnabled(false);
+
+
+        LoginMainPresenter loginMainPresenter = new LoginMainPresenter();
+        loginMainPresenter.subscribeForActivation(enterButton);
     }
 
 

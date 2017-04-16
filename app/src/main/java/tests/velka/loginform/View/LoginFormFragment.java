@@ -11,7 +11,7 @@ import com.jakewharton.rxbinding.widget.RxTextView;
 
 import rx.Observable;
 import rx.functions.Func2;
-import tests.velka.loginform.Model.Fields;
+import tests.velka.loginform.Model.FieldModel;
 import tests.velka.loginform.Presenter.LoginFragmentPresenter;
 import tests.velka.loginform.R;
 
@@ -33,10 +33,10 @@ public class LoginFormFragment extends Fragment {
         Observable observable = Observable.combineLatest(
                 RxTextView.textChanges(emailEditText),
                 RxTextView.textChanges(passwordEditText),
-                new Func2<CharSequence, CharSequence, Fields>() {
+                new Func2<CharSequence, CharSequence, FieldModel>() {
                     @Override
-                    public Fields call(CharSequence charSequence, CharSequence charSequence2) {
-                        return new Fields(charSequence, charSequence2);
+                    public FieldModel call(CharSequence charSequence, CharSequence charSequence2) {
+                        return new FieldModel(charSequence, charSequence2);
                     }
 
                 }

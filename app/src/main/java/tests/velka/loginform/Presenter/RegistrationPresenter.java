@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import rx.Observable;
 import rx.functions.Action1;
@@ -56,11 +57,16 @@ public class RegistrationPresenter {
      * Start "EmailView"
      */
     public void onRegButton(){
-        dbHelper.save(FieldModel.getEmail().toString(), FieldModel.getPassword().toString());
-        CurrentSession.setEmail(FieldModel.getEmail().toString());
+        if(!dbHelper.contains(FieldModel.getEmail().toString())) {
+            dbHelper.save(FieldModel.getEmail().toString(), FieldModel.getPassword().toString());
+            CurrentSession.setEmail(FieldModel.getEmail().toString());
 
-        InsideMainActivity insideMainActivity = new InsideMainActivity();
-        insideMainActivity.startActivity(context);
+            InsideMainActivity insideMainActivity = new InsideMainActivity();
+            insideMainActivity.startActivity(context);
+        }else{
+            Toast toast = Toast.makeText(context, "Email is busy", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 
 }

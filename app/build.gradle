@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "tests.velka.loginform"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -24,16 +24,18 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    testCompile 'junit:junit:4.12'
 
+
+    compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'io.reactivex:rxjava:1.1.0'
     compile 'io.reactivex:rxjava-async-util:0.21.0'
-
     compile 'io.reactivex:rxandroid:1.1.0'
-
     compile 'com.jakewharton.rxbinding:rxbinding:0.3.0'
-
     compile 'com.trello:rxlifecycle:0.4.0'
     compile 'com.trello:rxlifecycle-components:0.4.0'
+    compile 'com.google.android.gms:play-services:10.2.1'
+    testCompile 'junit:junit:4.12'
 }
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'

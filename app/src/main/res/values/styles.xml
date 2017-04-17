@@ -8,4 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Buttons">
+        <item name="android:background">@drawable/button_main</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="EditViewLogin">
+        <item name="android:colorAccent">@color/editAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextViewInside">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20dp</item>
+    </style>
 </resources>

@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="tests.velka.loginform.View.MainActivity">
+    tools:context="tests.velka.loginform.View.MainActivity"
+    android:background="@color/backgroundColor">
 
     <fragment
         android:layout_width="wrap_content"
@@ -24,7 +25,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="Login"
+        android:text="@string/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -32,7 +33,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        style="@style/Buttons"
+        android:onClick="onLogin"/>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -44,17 +47,23 @@
         android:gravity="bottom">
 
         <Button
-            android:text="Register"
+            android:text="@string/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/register_btn"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            style="@style/Buttons"
+            android:layout_marginRight="2dp"
+            android:onClick="onRegister"/>
 
         <Button
-            android:text="Google+"
+            android:text="@string/googleplus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/google_register_btn"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            style="@style/Buttons"
+            android:layout_marginLeft="2dp"
+            android:onClick="onGooglePlus"/>
     </LinearLayout>
 </RelativeLayout>

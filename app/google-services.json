@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "160258009005",
+    "project_id": "firebase-login-form"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160258009005:android:2cd95f686ae86066",
+        "android_client_info": {
+          "package_name": "tests.velka.loginform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160258009005-5kh8pae6hnsegj5jtnqko1t4coloni6v.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "160258009005-uafg5nn589ecvbbmlgku1dkk3834mfpa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tests.velka.loginform",
+            "certificate_hash": "e93f94a787b558f7ae438a20897ff92ea5d6e1f9"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCSFkdoSW06qqOboA7XcyuZZ-rnzUd9ZE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
